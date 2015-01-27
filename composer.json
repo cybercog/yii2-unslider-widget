@@ -1,5 +1,5 @@
 {
-  "name": "dd3v/unslider",
+  "name": "dd3v/yii2-unslider-wisget",
   "description": "Unslider widget for Yii 2",
   "license": "MIT",
   "authors": [
@@ -15,5 +15,6 @@
     "psr-4": {
       "dd3v\\unslider\\": ""
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
