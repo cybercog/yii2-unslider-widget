@@ -1,6 +1,6 @@
 <?php
 namespace dd3v\unslider;
- 
+
 use yii\base\Widget;
 use yii\helpers\Html;
 use yii\helpers\Json;
@@ -39,9 +39,9 @@ class Unslider extends Widget
     public $selector = 'banner';
     public $slides = [];
     public $options = [
-        'dots' => true,
-        'keys' => true,
-        'fluid' => true
+        'dots' => 1,
+        'keys' => 1,
+        'fluid' => 1
     ];
 
     public function init()
@@ -74,7 +74,6 @@ class Unslider extends Widget
     {
         $view = $this->getView();
         UnsliderAsset::register($view);
-        $options = Json::encode($this->options);
         $view->registerJs("jQuery('.$this->selector').unslider({dots: {$this->options['dots']}, keys: {$this->options['keys']}, fluid: {$this->options['fluid']}});");
     }
 }
