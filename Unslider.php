@@ -60,7 +60,8 @@ class Unslider extends Widget
             $slider .= Html::beginTag('div', ['class' => 'inner']);
             $slider .= isset($slide['title']) ? Html::tag('h1', $slide['title']) : null;
             $slider .= isset($slide['body']) ? Html::tag('p', $slide['body']) : null;
-            $slider .= isset($slide['button']) ? Html::a($slide['button']['title'], '', ['class' => 'btn']) : null;
+            $slider .= isset($slide['button']) ? Html::a($slide['button']['title'], $slide['button']['href'],
+                ['class' => $slide['button']['class']]) : null;
             $slider .= Html::endTag('div');
             $slider .= '</li>';
         }
