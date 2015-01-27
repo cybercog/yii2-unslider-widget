@@ -1,6 +1,6 @@
 <?php
 namespace dd3v\unslider;
-
+ 
 use yii\base\Widget;
 use yii\helpers\Html;
 use yii\helpers\Json;
