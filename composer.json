@@ -1,0 +1,19 @@
+{
+  "name": "dd3v/unslider",
+  "description": "Unslider widget for Yii 2",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Magalyas Dmitriy",
+      "email": "dmitriy.d3v@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "dd3v\\unslider\\": ""
+    }
+  }
+}
