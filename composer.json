@@ -15,5 +15,6 @@
     "psr-4": {
       "dd3v\\unslider\\": ""
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
