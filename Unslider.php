@@ -7,10 +7,33 @@ use yii\helpers\Json;
 use dd3v\unslider\UnsliderAsset;
 
 /**
- * Class Unslider
- * @package app\components\unslider
+ * Wrapper for Unslider jQuery plugin
+ * ```php
+ * use dd3v\unslider\Unslider;
+ * echo Unslider::widget([
+ *     'options' => [
+ *         'dots' => false,
+ *         'keys' => true,
+ *         'fluid' => true
+ *      ],
+ *      'slides' => [
+ *           [
+ *               'img' => 'http://unslider.com/img/sunset.jpg',
+ *               'title' => 'Yii PHP Framework',
+ *               'body' => 'Unslider widget for Yii 2',
+ *               'button' => ['title' => 'Download', 'href' => '#help', 'class' => 'btn']
+ *           ],
+ *           [
+ *               'img' => 'http://unslider.com/img/subway.jpg',
+ *               'title' => 'Another image',
+ *               'body' => 'description',
+ *               'button' => ['title' => 'Download', 'href' => '#help', 'class' => 'btn']
+ *           ]
+ * ]]);
+ *```
+ *
+ * @author Magalyas Dmitriy <dmitriy.d3v@gmail.com>
  */
-
 class Unslider extends Widget
 {
     public $selector = 'banner';
@@ -28,7 +51,6 @@ class Unslider extends Widget
 
     public function run()
     {
-
         $this->registerAssets();
 
         $slider = Html::beginTag('div', ['class' => $this->selector]);
@@ -45,18 +67,14 @@ class Unslider extends Widget
         $slider .= Html::endTag('ul');
         $slider .= Html::endTag('div');
 
-
         return $slider;
     }
 
     protected function registerAssets()
     {
-
         $view = $this->getView();
         UnsliderAsset::register($view);
         $options = Json::encode($this->options);
-
-        $view->registerJs("jQuery('.$this->selector').unslider({dots:true, keys:true, fluid: true});");
-
+        $view->registerJs("jQuery('.$this->selector').unslider({dots:$this->options['dots'], keys:$this->options['keys'], fluid: $this->options['fluid']});");
     }
 }
