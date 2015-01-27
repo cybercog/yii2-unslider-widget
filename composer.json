@@ -1,6 +1,15 @@
 {
   "name": "dd3v/yii2-unslider-widget",
-  "description": "Unslider widget for Yii 2",
+  "description": "Fluid, flexible, fantastically minimal slider widget for Yii 2.",
+  "keywords": [
+    "yii",
+    "yii2",
+    "slider",
+    "widget",
+    "unslider"
+  ],
+  "homepage": "https://github.com/dd3v/yii2-unslider-widget",
+  "type": "yii2-extension",
   "license": "MIT",
   "authors": [
     {
@@ -15,6 +24,5 @@
     "psr-4": {
       "dd3v\\unslider\\": ""
     }
-  },
-  "minimum-stability": "dev"
+  }
 }
